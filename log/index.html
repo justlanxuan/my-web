@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Lanxuan Hong</title>
+    <meta name="author" content="Lanxuan Hong" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+    <link rel="icon" href="../images/avatar.jpg" type="image/png" />
+    <style>
+      /* 可访问性辅助类：仅对屏幕阅读器可见 */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      /* 语言切换器样式 */
+      .filter-fieldset {
+        display: inline-flex;
+        align-items: center;
+        background: #f5f5f5;
+        border-radius: 10px;
+        padding: 2px;
+        border: 1px solid #e0e0e0;
+        margin: 0;
+      }
+
+      .filter-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 4px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        color: #666;
+        font-size: 13px;
+      }
+
+      .filter-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .filter-input:checked + .filter-text {
+        background: #ffffff;
+        color: #000;
+        font-weight: 600;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .filter-text {
+        padding: 4px 8px;
+        border-radius: 6px;
+        display: block;
+      }
+
+      .hidden-item {
+        display: none !important;
+      }
+
+      .search-results-count {
+        font-size: 12px;
+        color: #888;
+        margin-top: 8px;
+        height: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      "
+    >
+      <tbody>
+        <tr style="padding: 0px">
+          <td style="padding: 0px">
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr style="padding: 0px">
+                  <td colspan="2">
+                    <nav style="padding: 2.5% 2.5% 0 2.5%; text-align: right">
+                      <a href="../index.html">Home</a> &nbsp;|&nbsp; Log &#9679; 日志
+                    </nav>
+                  </td>
+                </tr>
+                <tr style="padding: 0px">
+                  <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap">
+                      <fieldset class="filter-fieldset" role="radiogroup">
+                        <legend class="sr-only">Filter content by language</legend>
+                        <label class="filter-label" title="All Languages">
+                          <input
+                            type="radio"
+                            name="lang-filter"
+                            value="all"
+                            class="filter-input"
+                            checked
+                            onchange="render()"
+                          />
+                          <span class="filter-text">A/文</span>
+                        </label>
+                        <label class="filter-label" title="Chinese Only">
+                          <input type="radio" name="lang-filter" value="zh" class="filter-input" onchange="render()" />
+                          <span class="filter-text">仅中文</span>
+                        </label>
+                        <label class="filter-label" title="English Only">
+                          <input type="radio" name="lang-filter" value="en" class="filter-input" onchange="render()" />
+                          <span class="filter-text">English Only</span>
+                        </label>
+                      </fieldset>
+
+                      <div style="flex-grow: 1">
+                        <label for="search-input" class="sr-only">Search content</label>
+                        <input
+                          id="search-input"
+                          type="text"
+                          style="
+                            width: 100%;
+                            padding: 12px 16px;
+                            border: 1px solid #e0e0e0;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                          "
+                          placeholder="Find content | 寻找感兴趣的内容"
+                          oninput="render()"
+                        />
+                      </div>
+                    </div>
+                    <p class="search-results-count" id="search-results-count" aria-live="polite"></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1 class="sectiontitle">Technical Notes</h1>
+            <table class="project">
+              <tbody>
+                <tr data-lang="both">
+                  <td class="project">
+                    <a href="">Scala for Functional Programming 笔记 </a>[ English &amp; 中文 ]
+                    <time datetime="2024-06-01">2024-06-01</time>
+                    <hr />
+                    <p>
+                      keywords: Functional Programming, Scala, Type System, Lambda Calculus, Monads, Category Theory,
+                      IMU Sensor
+                    </p>
+                  </td>
+                </tr>
+                <tr data-lang="en">
+                  <td class="project">
+                    IMU sensor design [ <a href="blog/index.html" target="_blank">Blog</a> ]
+                    <time datetime="2024-06-01">2024-06-01</time>
+                    <hr />
+                    <p>keywords: IMU Sensor, Sensor Fusion, Kalman Filter, Complementary Filter, Orientation</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1 class="sectiontitle">Traveling</h1>
+            <table class="project">
+              <tbody>
+                <tr data-lang="both">
+                  <td class="project">
+                    2026, USA | 美国
+                    <a class="photos" href="travel/czech/" target="_blank">Gallery &nearrow;</a>
+                    <hr />
+                    <ul>
+                      <li>布拉格</li>
+                      <li>ck小镇</li>
+                    </ul>
+                    <details class="inline">
+                      <summary>More | 更多地方</summary>
+                      <!-- 内部内容通常跟随父级语言设定 -->
+                      Fall 2025 &#65312; HKUST
+                      <hr />
+                      <ul>
+                        <li>COMP 3031 Principles of Programming Language</li>
+                        <li>ELEC 2600 Probability and Random Processes in Engineering</li>
+                        <li>
+                          [ <a href="https://github.com/justlanxuan/foggytcp" target="_blank">Code</a> ] ELEC 3120
+                          Computer Communication Networks
+                        </li>
+                      </ul>
+                      <!-- ... 其余内容保持不变 ... -->
+                    </details>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h1 class="sectiontitle">Projects</h1>
+            <table class="project">
+              <tbody>
+                <tr data-lang="en">
+                  <td class="project">
+                    Tactile Sensor Design for Fabric Detection &nbsp; &#9670; &nbsp; <em>Research</em>
+                    <hr />
+                    <p>Project Advisors: <a href="https://ece.hkust.edu.hk/eeyajing" target="_blank">Yajing Shen</a></p>
+                    <p>In this project, we are working to develop a high-precision tactile sensor...</p>
+                    <hr />
+                    <u>Publications</u>
+                    <p>
+                      [ <a href="data/tactile-sensor.pdf" target="_blank">PDF</a> ]
+                      <papertitle>A Highly Robust Contact Sensor for Precise Contact Detection of Fabric.</papertitle>
+                    </p>
+                  </td>
+                </tr>
+                <tr data-lang="en">
+                  <td class="project">
+                    Using Wearable Devices and Cameras for ASD Screening &nbsp; &#9670; &nbsp; <em>Research</em>
+                    <hr />
+                    <p>Project Advisors: <a href="https://xmouyang.github.io/" target="_blank">Xiaomin Ouyang</a></p>
+                    <p>In this project, we are working to develop a privacy-aware tracking architecture...</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-top: 50px">
+              <tbody>
+                <tr>
+                  <td>
+                    <p style="text-align: right; font-size: 12px; color: #999">
+                      page layout credits:
+                      <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>,
+                      <a href="https://homes.cs.washington.edu/~jessejm/" target="_blank">Jesse J. Martinez</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      let searchableRows = [];
+      let originalRowHTMLs = [];
+      let sectionTitles = [];
+
+      const searchInput = document.getElementById("search-input");
+      const resultsCount = document.getElementById("search-results-count");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        // 记录所有带语言标记的行
+        searchableRows = Array.from(document.querySelectorAll("tr[data-lang]"));
+        originalRowHTMLs = searchableRows.map((el) => el.innerHTML);
+        // 记录标题，用于在搜索时处理
+        sectionTitles = Array.from(document.querySelectorAll(".sectiontitle"));
+      });
+
+      function render() {
+        const query = searchInput.value.trim().toLowerCase();
+        const selectedLang = document.querySelector('input[name="lang-filter"]:checked').value;
+
+        let totalMatches = 0;
+
+        searchableRows.forEach((row, index) => {
+          // 1. 恢复原始 HTML
+          row.innerHTML = originalRowHTMLs[index];
+          const itemLang = row.getAttribute("data-lang");
+
+          // 2. 语言过滤逻辑
+          let langMatch =
+            selectedLang === "all" ||
+            (selectedLang === "zh" && itemLang.includes("zh")) ||
+            (selectedLang === "en" && itemLang.includes("en")) ||
+            itemLang === "both";
+
+          if (!langMatch) {
+            row.classList.add("hidden-item");
+            return;
+          } else {
+            row.classList.remove("hidden-item");
+          }
+
+          // 3. 搜索高亮逻辑
+          if (query) {
+            const regex = new RegExp(`(?![^<]*>)${escapeRegExp(query)}`, "gi");
+            const walk = document.createTreeWalker(row, NodeFilter.SHOW_TEXT, null, false);
+            let node;
+            const nodesToReplace = [];
+
+            while ((node = walk.nextNode())) {
+              if (node.nodeValue.toLowerCase().includes(query)) {
+                nodesToReplace.push(node);
+              }
+            }
+
+            nodesToReplace.forEach((node) => {
+              const matches = node.nodeValue.match(regex);
+              totalMatches += matches ? matches.length : 0;
+              const span = document.createElement("span");
+              span.innerHTML = node.nodeValue.replace(
+                regex,
+                (m) => `<mark style="background-color: #ffeb3b; color: black; padding: 0; margin: 0;">${m}</mark>`,
+              );
+              node.parentNode.replaceChild(span, node);
+
+              // 自动展开包含匹配项的 details
+              let parent = span.parentElement;
+              while (parent) {
+                if (parent.tagName === "DETAILS") parent.open = true;
+                parent = parent.parentElement;
+              }
+            });
+          }
+        });
+
+        // 4. 更新计数
+        if (query) {
+          resultsCount.textContent =
+            totalMatches > 0
+              ? `Found ${totalMatches} match(es) | 找到 ${totalMatches} 处匹配`
+              : "No matches found | 未找到匹配内容";
+        } else {
+          resultsCount.textContent = "";
+        }
+
+        // 5. 处理空章节标题（如果没有可见内容则隐藏标题）
+        sectionTitles.forEach((title) => {
+          const nextTable = title.nextElementSibling;
+          if (nextTable && nextTable.tagName === "TABLE") {
+            const hasVisibleRow = nextTable.querySelector("tr[data-lang]:not(.hidden-item)");
+            title.style.display = hasVisibleRow ? "block" : "none";
+          }
+        });
+      }
+
+      function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+    </script>
+  </body>
+</html>

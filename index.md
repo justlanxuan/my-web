@@ -1,18 +1,11 @@
             <!--
             <h1>Publications &amp; Presentations</h1>
             <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 5px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
+              class = "project"
             >
               <tbody>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     <p>
                       [
                       <a href="data/MackASSETS2025.pdf" target="_blank">PDF</a>
@@ -218,18 +211,11 @@
 
             <h1 class="sectiontitle">Projects</h1>
             <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 5px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
+              class = "project"
             >
               <tbody>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     Accessibility &amp; Game Adoption &nbsp; &#9670; &nbsp;
                     <em>Research</em>
                     <hr />
@@ -276,7 +262,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     <p>
                       A11yhood: Supporting PWD in Adopting Access Technologies &nbsp; &#9670; &nbsp; <em>Research</em>
                     </p>
@@ -299,7 +285,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     <p>
                       Models of Accessibility &nbsp; &#9670; &nbsp;
                       <em>Research</em>
@@ -345,7 +331,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     <p>Ability Heuristics for Technology Evaluation &nbsp; &#9670; &nbsp; <em>Research</em></p>
                     <hr />
                     <p>
@@ -368,7 +354,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     Accessible Tabletop Game Modification &nbsp; &#9672; &nbsp;
                     <em>Research &amp; Consulting</em>
                     <hr />
@@ -411,7 +397,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     Accessible Data Visualization Experiences &nbsp; &#9670; &nbsp; <em>Research</em>
                     <hr />
                     <p>
@@ -462,7 +448,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     CREATE Accessible Esports Showcase &nbsp; &#9672; &nbsp;
                     <em>Service &amp; Research</em>
                     <hr />
@@ -484,7 +470,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="projectdesc">
+                  <td class="project">
                     Repairing Android Game Inaccessibility &nbsp; &#9670; &nbsp;
                     <em>Research</em>
                     <hr />

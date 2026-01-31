@@ -165,37 +165,60 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-td.projectdesc {
+td.project {
   border: 3px outset gray;
   padding: 10px;
   padding-bottom: 0px;
   width: 100%;
+}
+table.project {
+  width: 100%;
+  border: 0px;
+  border-spacing: 5px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
 }
 h1.sectiontitle {
   margin: 5px 0px 5px 10px;
   width: 100%;
 }
 
-.course summary {
+.inline summary {
   cursor: pointer;
   display: inline-block;
   padding-bottom: 0.5rem;
   color: var(--link);
 }
 
-.course summary::marker {
+.inline summary::marker {
   display: none;
 }
 
-.course summary::after {
+.inline summary::after {
   content: " ▼";
 }
 
-.course[open] summary::after {
+.inline[open] summary::after {
   content: " ▲";
 }
 
-.course summary:hover,
-.course summary:focus-visible {
+.inline summary:hover,
+.inline summary:focus-visible {
   color: var(--onclick);
+}
+time {
+  float: right;
+  color: #888;
+  font-size: 0.9rem;
+}
+.hidden {
+  display: none !important;
+}
+.search-results-count {
+  font-size: 0.9rem;
+  color: var(--link);
+}
+.photos {
+  float: right;
 }
